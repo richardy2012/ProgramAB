@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category>
+		<pattern>MY NAME IS *</pattern> 
+		<template>
+			Hello <star/>! Nice to meet you; Name: John
+		</template>
+	</category>
+
+</aiml>
