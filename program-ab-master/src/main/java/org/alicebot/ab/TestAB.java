@@ -1,6 +1,7 @@
 package org.alicebot.ab;
 
 import org.alicebot.ab.utils.IOUtils;
+import org.alicebot.ab.utils.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -41,6 +42,10 @@ public class TestAB {
                 String response = chatSession.multisentenceRespond(request);
                 while (response.contains("&lt;")) response = response.replace("&lt;","<");
                 while (response.contains("&gt;")) response = response.replace("&gt;",">");
+                //parse the output here?
+                StringUtils splitter = new StringUtils(); 
+                String parts[] = splitter.splitDotComma(response);
+                response = parts[0];
                 IOUtils.writeOutputTextLine("Robot", response);
                 //System.out.println("Learn graph:");
                 //bot.learnGraph.printgraph();
