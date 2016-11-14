@@ -1,6 +1,7 @@
 package org.alicebot.ab;
 
 import org.alicebot.ab.utils.IOUtils;
+import org.alicebot.ab.utils.JdbcSelectTest;
 import org.alicebot.ab.utils.StringUtils;
 
 import java.io.BufferedReader;
@@ -49,6 +50,8 @@ public class TestAB {
                 IOUtils.writeOutputTextLine("Robot", response);
                 //System.out.println("Learn graph:");
                 //bot.learnGraph.printgraph();
+                JdbcSelectTest jdbc = new JdbcSelectTest();
+                jdbc.testJdbc();
             }
         }
     }
