@@ -1,12 +1,13 @@
 package org.alicebot.ab;
 
-import org.alicebot.ab.utils.IOUtils;
-import org.alicebot.ab.utils.JdbcSelectTest;
-import org.alicebot.ab.utils.StringUtils;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+
+import org.alicebot.ab.utils.AimlToJavaService;
+import org.alicebot.ab.utils.IOUtils;
+import org.alicebot.ab.utils.Jdbc;
+import org.alicebot.ab.utils.StringUtils;
 
 /**
  * Created by User on 5/13/2014.
@@ -50,8 +51,8 @@ public class TestAB {
                 IOUtils.writeOutputTextLine("Robot", response);
                 //System.out.println("Learn graph:");
                 //bot.learnGraph.printgraph();
-                JdbcSelectTest jdbc = new JdbcSelectTest();
-                jdbc.testJdbc();
+                AimlToJavaService service = new AimlToJavaService(parts[1]);
+                service.execute();
             }
         }
     }
