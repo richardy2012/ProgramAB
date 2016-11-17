@@ -6,4 +6,9 @@ public class StringUtils {
 		String[] parts = toSplit.split(";");
 		return parts;
 	}
+	
+	public String [] splitAttValue(String toSplit){ //Name: Bernardo
+		String[] parts = toSplit.split(":");
+		return parts;
+	}
 }

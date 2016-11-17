@@ -3,7 +3,7 @@
 	<category>
 		<pattern>MY NAME IS *</pattern> 
 		<template>
-			Hello <star/>! Nice to meet you;Name: <star/>
+			Hello <star/>! Nice to meet you;Name:<star/>
 		</template>
 	</category>
 

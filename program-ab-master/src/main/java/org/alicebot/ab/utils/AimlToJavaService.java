@@ -11,7 +11,12 @@ public class AimlToJavaService {
 	}
 	
 	public void execute(){
-		jdbc.insert("John");
+		//check if record already exists
+		StringUtils splitter = new StringUtils(); 
+        String parts[] = splitter.splitAttValue(aiml);
+        int count = jdbc.checkIfExists(parts[0], parts[1]);
+		
+        System.out.println("Matching records: " + count);
 	}
 	
 	
